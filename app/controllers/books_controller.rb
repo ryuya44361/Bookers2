@@ -12,7 +12,7 @@ class BooksController < ApplicationController
   end
   
   def index
-    @books = Books.all
+    @books = Book.all
   end
   
   def show
