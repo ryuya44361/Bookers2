@@ -6,9 +6,16 @@ end
   
 def show
    @user = User.find(params[:id])
+   @books = @user.books
 end
 
 def edit
 end
   
 end
+
+private
+
+  def user_params
+   params.require(:user).permit(:name, :image, :introduction)
+  end
